@@ -6,19 +6,31 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <title>凡信中的好友关系 | clawpo&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="下载凡信的源码到本地###凡信的github地址如下：https://github.com/huangfangyi/FanXin2.0_IM.git
-导入到AS中，修改.9图片错误##">
+  <meta name="description" content="下载凡信的源码到本地凡信的github地址如下：https://github.com/huangfangyi/FanXin2.0_IM.git原作者还做了一个集成支付宝的体验版，可以下载并打赏。http://120.24.211.126/fanxin/download/Fanxin.apk
+导入到AS中
+修改.9图片错误
+修改完图片编译即可成功，但是运行到模拟器中会有以下错误
+
+Message｀｀">
 <meta property="og:type" content="article">
 <meta property="og:title" content="凡信中的好友关系">
 <meta property="og:url" content="http://clawpo.github.io/2016/04/28/fanxin-s-f/index.html">
 <meta property="og:site_name" content="clawpo's Blog">
-<meta property="og:description" content="下载凡信的源码到本地###凡信的github地址如下：https://github.com/huangfangyi/FanXin2.0_IM.git
-导入到AS中，修改.9图片错误##">
-<meta property="og:updated_time" content="2016-04-28T03:49:09.000Z">
+<meta property="og:description" content="下载凡信的源码到本地凡信的github地址如下：https://github.com/huangfangyi/FanXin2.0_IM.git原作者还做了一个集成支付宝的体验版，可以下载并打赏。http://120.24.211.126/fanxin/download/Fanxin.apk
+导入到AS中
+修改.9图片错误
+修改完图片编译即可成功，但是运行到模拟器中会有以下错误
+
+Message｀｀">
+<meta property="og:updated_time" content="2016-04-28T09:28:55.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="凡信中的好友关系">
-<meta name="twitter:description" content="下载凡信的源码到本地###凡信的github地址如下：https://github.com/huangfangyi/FanXin2.0_IM.git
-导入到AS中，修改.9图片错误##">
+<meta name="twitter:description" content="下载凡信的源码到本地凡信的github地址如下：https://github.com/huangfangyi/FanXin2.0_IM.git原作者还做了一个集成支付宝的体验版，可以下载并打赏。http://120.24.211.126/fanxin/download/Fanxin.apk
+导入到AS中
+修改.9图片错误
+修改完图片编译即可成功，但是运行到模拟器中会有以下错误
+
+Message｀｀">
   
     <link rel="alternative" href="/atom.xml" title="clawpo&#39;s Blog" type="application/atom+xml">
   
@@ -241,8 +253,60 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="下载凡信的源码到本地"><a href="#下载凡信的源码到本地" class="headerlink" title="下载凡信的源码到本地"></a>下载凡信的源码到本地</h2><p>###凡信的github地址如下：<br><a href="https://github.com/huangfangyi/FanXin2.0_IM.git" target="_blank" rel="external">https://github.com/huangfangyi/FanXin2.0_IM.git</a></p>
-<h2 id="导入到AS中，修改-9图片错误"><a href="#导入到AS中，修改-9图片错误" class="headerlink" title="导入到AS中，修改.9图片错误"></a>导入到AS中，修改.9图片错误</h2><p>##</p>
+        <h4 id="下载凡信的源码到本地"><a href="#下载凡信的源码到本地" class="headerlink" title="下载凡信的源码到本地"></a>下载凡信的源码到本地</h4><p>凡信的github地址如下：<br><a href="https://github.com/huangfangyi/FanXin2.0_IM.git" target="_blank" rel="external">https://github.com/huangfangyi/FanXin2.0_IM.git</a><br>原作者还做了一个集成支付宝的体验版，可以下载并打赏。<br><a href="http://120.24.211.126/fanxin/download/Fanxin.apk" target="_blank" rel="external">http://120.24.211.126/fanxin/download/Fanxin.apk</a></p>
+<h4 id="导入到AS中"><a href="#导入到AS中" class="headerlink" title="导入到AS中"></a>导入到AS中</h4><ol>
+<li>修改.9图片错误</li>
+<li>修改完图片编译即可成功，但是运行到模拟器中会有以下错误</li>
+</ol>
+<h5 id="Message"><a href="#Message" class="headerlink" title="Message"></a>Message</h5><p><code>｀｀Java
+Error:Execution failed for task &#39;:fanXin20:transformClassesWithDexForDebug&#39;.&gt; com.android.build.api.transform.TransformException: java.lang.RuntimeException: com.android.ide.common.process.ProcessException: java.util.concurrent.ExecutionException: com.android.ide.common.process.ProcessException: org.gradle.process.internal.ExecException: Process &#39;command &#39;/Library/Java/JavaVirtualMachines/jdk1.7.0_79.jdk/Contents/Home/bin/java&#39;&#39; finished with non-zero exit value 1</code>｀｀</p>
+<h5 id="Gradle-Console"><a href="#Gradle-Console" class="headerlink" title="Gradle Console"></a>Gradle Console</h5><p><code>AGPBI: {&quot;kind&quot;:&quot;error&quot;,&quot;text&quot;:&quot;Exception in thread \&quot;main\&quot; java.lang.UnsupportedClassVersionError: com/android/dx/command/Main : Unsupported major.minor version 52.0&quot;,&quot;sources&quot;:[{}]}
+AGPBI: {&quot;kind&quot;:&quot;error&quot;,&quot;text&quot;:&quot;\tat java.lang.ClassLoader.defineClass1(Native Method)&quot;,&quot;sources&quot;:[{}]}
+AGPBI: {&quot;kind&quot;:&quot;error&quot;,&quot;text&quot;:&quot;\tat java.lang.ClassLoader.defineClass(ClassLoader.java:800)&quot;,&quot;sources&quot;:[{}]}
+AGPBI: {&quot;kind&quot;:&quot;error&quot;,&quot;text&quot;:&quot;\tat java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142)&quot;,&quot;sources&quot;:[{}]}
+AGPBI: {&quot;kind&quot;:&quot;error&quot;,&quot;text&quot;:&quot;\tat java.net.URLClassLoader.defineClass(URLClassLoader.java:449)&quot;,&quot;sources&quot;:[{}]}
+AGPBI: {&quot;kind&quot;:&quot;error&quot;,&quot;text&quot;:&quot;\tat java.net.URLClassLoader.access$100(URLClassLoader.java:71)&quot;,&quot;sources&quot;:[{}]}
+AGPBI: {&quot;kind&quot;:&quot;error&quot;,&quot;text&quot;:&quot;\tat java.net.URLClassLoader$1.run(URLClassLoader.java:361)&quot;,&quot;sources&quot;:[{}]}
+AGPBI: {&quot;kind&quot;:&quot;error&quot;,&quot;text&quot;:&quot;\tat java.net.URLClassLoader$1.run(URLClassLoader.java:355)&quot;,&quot;sources&quot;:[{}]}
+AGPBI: {&quot;kind&quot;:&quot;error&quot;,&quot;text&quot;:&quot;\tat java.security.AccessController.doPrivileged(Native Method)&quot;,&quot;sources&quot;:[{}]}
+AGPBI: {&quot;kind&quot;:&quot;error&quot;,&quot;text&quot;:&quot;\tat java.net.URLClassLoader.findClass(URLClassLoader.java:354)&quot;,&quot;sources&quot;:[{}]}
+AGPBI: {&quot;kind&quot;:&quot;error&quot;,&quot;text&quot;:&quot;\tat java.lang.ClassLoader.loadClass(ClassLoader.java:425)&quot;,&quot;sources&quot;:[{}]}
+AGPBI: {&quot;kind&quot;:&quot;error&quot;,&quot;text&quot;:&quot;\tat sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:308)&quot;,&quot;sources&quot;:[{}]}
+AGPBI: {&quot;kind&quot;:&quot;error&quot;,&quot;text&quot;:&quot;\tat java.lang.ClassLoader.loadClass(ClassLoader.java:358)&quot;,&quot;sources&quot;:[{}]}
+AGPBI: {&quot;kind&quot;:&quot;error&quot;,&quot;text&quot;:&quot;\tat sun.launcher.LauncherHelper.checkAndLoadMain(LauncherHelper.java:482)&quot;,&quot;sources&quot;:[{}]}
+FAILED
+FAILURE: Build failed with an exception.</code></p>
+<p>#####解决方法<br>将fanXin20下的build.gradle中的</p>
+<p><code>buildToolsVersion &quot;24.0.0 rc2&quot;</code></p>
+<p>修改为</p>
+<p><code>buildToolsVersion &quot;23.0.2&quot;</code><br>即可正常运行到模拟器中</p>
+<p>3.</p>
+<p>##User表<br>凡信中讲环信的user实体类修改如下</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> &lt;T&gt; <span class="function">DataSource&lt;T&gt; <span class="title">immediateFailedDataSource</span><span class="params">(Throwable failure)</span> </span>&#123;</span><br><span class="line">    SettableDataSource&lt;T&gt; settableDataSource = SettableDataSource.create();</span><br><span class="line">    settableDataSource.setFailure(failure);</span><br><span class="line">    <span class="keyword">return</span> settableDataSource;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<pre><code>private int unreadMsgCount;
+private String header;
+private String usernick;
+private String sex;
+private String tel;
+private String fxid;
+private String region;
+private String avatar;
+private String sign;
+private String beizhu;
+</code></pre><p>重新封装了InviteMessage消息实体类</p>
+<p>private String from;</p>
+<pre><code>//时间
+private long time;
+//添加理由
+private String reason;
+//未验证，已同意等状态
+private InviteMesageStatus status;
+//群id
+private String groupId;
+//群名称
+private String groupName;
+private int id;
+</code></pre><p>从服务器拉取数据的工具类<br>图片异步加载类LoadDataFromServer<br>使用的HttpClient，但是</p>
 
       
     </div>
