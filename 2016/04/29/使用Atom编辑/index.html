@@ -12,7 +12,7 @@
 <meta property="og:url" content="http://clawpo.github.io/2016/04/29/使用Atom编辑/index.html">
 <meta property="og:site_name" content="clawpo's Blog">
 <meta property="og:description" content="几经周折，最终确定使用Atom来最为本博客的编辑器啦！">
-<meta property="og:updated_time" content="2016-04-28T18:10:03.000Z">
+<meta property="og:updated_time" content="2016-04-29T09:14:38.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用Atom编辑">
 <meta name="twitter:description" content="几经周折，最终确定使用Atom来最为本博客的编辑器啦！">
@@ -57,11 +57,6 @@
 							<div class="ribbon"></div>
 						</div>
 						
-						<div class="icon-wrap icon-link hide" data-idx="2">
-							<div class="loopback_l"></div>
-							<div class="loopback_r"></div>
-						</div>
-						
 						
 						<div class="icon-wrap icon-me hide" data-idx="3">
 							<div class="user"></div>
@@ -76,8 +71,6 @@
 					<ul class="tips-inner">
 						<li>Menu</li>
 						<li>Tags</li>
-						
-						<li>Links</li>
 						
 						
 						<li>Über</li>
@@ -119,34 +112,16 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						
+						<a href="/tags/80后/" style="font-size: 10px;">80后</a> <a href="/tags/android/" style="font-size: 10px;">android</a> <a href="/tags/atom/" style="font-size: 10px;">atom</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/github/" style="font-size: 20px;">github</a> <a href="/tags/google-cloud/" style="font-size: 20px;">google cloud</a> <a href="/tags/markdown/" style="font-size: 20px;">markdown</a> <a href="/tags/sykapao/" style="font-size: 10px;">sykapao</a> <a href="/tags/环信/" style="font-size: 10px;">环信</a> <a href="/tags/随笔/" style="font-size: 10px;">随笔</a>
 					</div>
 				</section>
 				
 				
 				
-				<section class="switch-part switch-part3">
-					<div id="js-friends">
-					
-			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">奥巴马的博客</a>
-			        
-			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">卡卡的美丽传说</a>
-			        
-			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">本泽马的博客</a>
-			        
-			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">吉格斯的博客</a>
-			        
-			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">习大大大不同</a>
-			        
-			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">托蒂的博客</a>
-			        
-			        </div>
-				</section>
-				
 
 				
 				
-				<section class="switch-part switch-part4">
+				<section class="switch-part switch-part3">
 				
 					<div id="js-aboutme">我是谁，我从哪里来，我到哪里去？我就是我，是颜色不一样的吃货…</div>
 				</section>
@@ -230,6 +205,10 @@
       
       <div class="article-info article-info-post">
         
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/atom/">atom</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/markdown/">markdown</a></li></ul>
+	</div>
+
         
 
         <div class="clearfix"></div>
@@ -240,15 +219,15 @@
       
         <p>几经周折，最终确定使用<strong>Atom</strong>来最为本博客的编辑器啦！</p>
 <a id="more"></a>
-<h3 id="1-Mon"><a href="#1-Mon" class="headerlink" title="1. Mon"></a>1. Mon</h3><p>Mon实时预览的功能，是我最先选择使用的理由。可惜对程序猿不是很友好，插入code的样式总是很丑，也许是我没玩转吧，其实我只想要下面这个样子，能正常显示下Java的代码就好啦。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">BitmapCache</span>  </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> LruCache&lt;String, Bitmap&gt; mCache;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">BitmapCache</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> maxMemory = (<span class="keyword">int</span>) Runtime.getRuntime().maxMemory();   </span><br><span class="line">        <span class="keyword">int</span> maxSize =maxMemory/<span class="number">8</span>;</span><br><span class="line">        mCache = <span class="keyword">new</span> LruCache&lt;String, Bitmap&gt;(maxSize) &#123;</span><br><span class="line">            <span class="meta">@SuppressLint</span>(<span class="string">"NewApi"</span>)</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">protected</span> <span class="keyword">int</span> <span class="title">sizeOf</span><span class="params">(String key, Bitmap bitmap)</span> </span>&#123;</span><br><span class="line">                <span class="keyword">return</span> bitmap.getByteCount();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Bitmap <span class="title">getBitmap</span><span class="params">(String url)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> mCache.get(url);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">putBitmap</span><span class="params">(String url, Bitmap bitmap)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        mCache.put(url, bitmap);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="1-Mou"><a href="#1-Mou" class="headerlink" title="1. Mou"></a>1. Mou</h3><p>Mou实时预览的功能，是我最先选择使用的理由。可惜对程序猿不是很友好，插入code的样式总是很丑，也许是我没玩转吧，其实我只想要下面这个样子，能正常显示下Java的代码就好啦。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">BitmapCache</span>  </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> LruCache&lt;String, Bitmap&gt; mCache;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">BitmapCache</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> maxMemory = (<span class="keyword">int</span>) Runtime.getRuntime().maxMemory();   </span><br><span class="line">        <span class="keyword">int</span> maxSize =maxMemory/<span class="number">8</span>;</span><br><span class="line">        mCache = <span class="keyword">new</span> LruCache&lt;String, Bitmap&gt;(maxSize) &#123;</span><br><span class="line">            <span class="meta">@SuppressLint</span>(<span class="string">"NewApi"</span>)</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">protected</span> <span class="keyword">int</span> <span class="title">sizeOf</span><span class="params">(String key, Bitmap bitmap)</span> </span>&#123;</span><br><span class="line">                <span class="keyword">return</span> bitmap.getByteCount();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Bitmap <span class="title">getBitmap</span><span class="params">(String url)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> mCache.get(url);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">putBitmap</span><span class="params">(String url, Bitmap bitmap)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        mCache.put(url, bitmap);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <h3 id="2-Ulysses"><a href="#2-Ulysses" class="headerlink" title="2. Ulysses"></a>2. Ulysses</h3><p>使用Ulysses完全是看到一个贴子上面写的，</p>
 <blockquote>
-<p>不差钱用Ulysses，差钱用Mon。</p>
+<p>不差钱用Ulysses，差钱用Mou。</p>
 </blockquote>
 <p>所以下载啦一个破解版的，试用了一下确实强大，各种格式都支持，就是没有实时预览，只能放弃。</p>
 <h3 id="3-为知笔记"><a href="#3-为知笔记" class="headerlink" title="3. 为知笔记"></a>3. 为知笔记</h3><p>为知笔记完全是看同事在windows电脑上面用的很溜才自己下载的，自己试用的时候也很爽啊，用它写了很多东西，写完就去打开hexo的本地服务器预览，想看看效果啊，结果什么都没有啊！翻来覆去的看了半天，才发现我的一个自以为是的操作，不是打开我hexo目录下的文件，是导入啊，崩溃。但不得不承认，功能很强大。</p>
 <h3 id="4-Sublime-Text2"><a href="#4-Sublime-Text2" class="headerlink" title="4. Sublime Text2"></a>4. Sublime Text2</h3><p>Sublime是我电脑上面默认的文本编辑器，现在还没鼓捣看看对markdown的支持和预览的情况，先挂个名，以后再表。</p>
-<h3 id="5-Atom"><a href="#5-Atom" class="headerlink" title="5. Atom"></a>5. Atom</h3><p>Atom这个软件，已经在我电脑上面存在很长的时间了，下载软件完全是之前看到一个gif的图片后猎奇才下载的，图片的效果就是Atom使用了<em>activate-power-mode</em>这个插件后的打字效果，超级带感啊。后知后觉的了解到Atom是GitHub专门为程序员推出的一个跨平台文本编辑器，就没有然后了。在我被上面几个软件搞的烦躁不安的时候，发现邮件md文件打开的第一个选项是Atom，鬼使神差的就打开了，也就打开了一个新世界啊。<br>说说Atom的好</p>
+<h3 id="5-Atom"><a href="#5-Atom" class="headerlink" title="5. Atom"></a>5. Atom</h3><p>Atom这个软件，已经在我电脑上面存在很长的时间了，下载软件完全是之前看到一个gif的图片后猎奇才下载的，图片的效果就是Atom使用了<em>activate-power-mode</em>这个插件后的打字效果，超级带感啊。后知后觉的了解到Atom是GitHub专门为程序员推出的一个跨平台文本编辑器，就没有然后了。在我被上面几个软件搞的烦躁不安的时候，发现右键md文件打开的第一个选项是Atom，鬼使神差的就打开了，也就打开了一个新世界啊。<br>说说Atom的好</p>
 <ol>
 <li>第一个必须是高亮显示啊。</li>
 <li>有文件管理啊。在设置里面填好自己的hexo目录和网站地址，会自动导入啊。</li>
@@ -269,7 +248,7 @@
 <p><a href="https://atom.io" target="_blank" rel="external">Atom下载地址</a></p>
 </li>
 </ul>
-<p>Markdown更详细的语法说明，可以参考我们准备的 <a href="https://www.zybuluo.com/mdeditor?url=https://www.zybuluo.com/static/editor/md-help.markdown" target="_blank" rel="external">Cmd Markdown 简明语法手册</a>，进阶用户可以参考 <a href="https://www.zybuluo.com/mdeditor?url=https://www.zybuluo.com/static/editor/md-help.markdown#cmd-markdown-高阶语法手册" target="_blank" rel="external">Cmd Markdown 高阶语法手册</a> 了解更多高级功能。</p>
+<p>Markdown更详细的语法说明，可以参考 <a href="https://www.zybuluo.com/mdeditor?url=https://www.zybuluo.com/static/editor/md-help.markdown" target="_blank" rel="external">Cmd Markdown 简明语法手册</a>，进阶用户可以参考 <a href="https://www.zybuluo.com/mdeditor?url=https://www.zybuluo.com/static/editor/md-help.markdown#cmd-markdown-高阶语法手册" target="_blank" rel="external">Cmd Markdown 高阶语法手册</a> 了解更多高级功能。</p>
 <hr>
 <p> 再一次感谢您花费时间阅读这份欢迎稿，点击 <i class="icon-file"></i> (Ctrl+Alt+N) 开始撰写新的文稿吧！祝您在这里记录、阅读、分享愉快！</p>
 <p> 作者 <a href="http://weibo.com/1678286327" target="_blank" rel="external">@clawpo</a>     </p>
@@ -287,7 +266,7 @@
   
   
     <a href="/2016/04/28/text/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">测试markdown</div>
+      <div class="article-nav-title">测试Markdown</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -331,13 +310,14 @@
     		&copy; 2016 Claw Po
     	</div>
       <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-      <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+      本站总访问量<span id="busuanzi_value_site_pv"></span>次,访客数<span id="busuanzi_value_site_uv"></span>人次
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
       	</div>
     </div>
   </div>
 </footer>
+
     </div>
     
   <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
