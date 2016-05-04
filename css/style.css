@@ -851,6 +851,12 @@ a {
   padding-left: 8px;
   font-size: 12px;
 }
+.archive-article-inner .article-meta .article-custom {
+  margin-top: 30px;
+  width: auto;
+  padding-left: 8px;
+  font-size: 10px;
+}
 .body-wrap {
   margin-bottom: 80px;
 }
@@ -1461,9 +1467,15 @@ a {
   padding-left: 8px;
   font-size: 12px;
 }
+.archive-article-inner .article-meta .article-custom {
+  margin-top: 30px;
+  width: auto;
+  padding-left: 8px;
+  font-size: 10px;
+}
 .article-entry pre,
 .article-entry .highlight {
-  background: #272822;
+  background: #000;
   margin: 10px 0;
   padding: 10px 10px;
   overflow: auto;
@@ -1542,7 +1554,7 @@ a {
   border-style: solid;
   border-color: #ddd;
   border-width: 1px 0;
-  background: #272822;
+  background: #000;
   padding: 15px 20px 15px 0;
 }
 .article-entry .gist .gist-file {
@@ -1568,7 +1580,7 @@ a {
   border: none;
 }
 .article-entry .gist .gist-file .gist-meta {
-  background: #272822;
+  background: #000;
   color: highlight-comment;
   font: 0.85em "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-shadow: 0 0;
