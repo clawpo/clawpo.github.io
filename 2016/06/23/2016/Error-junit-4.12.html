@@ -4,18 +4,21 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>clawpo&#39;s Blog</title>
+  <title>Error:(23, 17) Failed to resolve: junit:junit:4.12 | clawpo&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="tKPha64JQE">
-<meta property="og:type" content="website">
-<meta property="og:title" content="clawpo's Blog">
-<meta property="og:url" content="http://clawpo.github.io/baidu_verify_tKPha64JQE.html">
+  <meta name="description" content="导入其他人项目的时候，Junit报错，信息如下
+1Error:(23, 17) Failed to resolve: junit:junit:4.12">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Error:(23, 17) Failed to resolve: junit:junit:4.12">
+<meta property="og:url" content="http://clawpo.github.io/2016/06/23/2016/Error-junit-4.12.html">
 <meta property="og:site_name" content="clawpo's Blog">
-<meta property="og:description" content="tKPha64JQE">
-<meta property="og:updated_time" content="2016-04-30T16:26:19.000Z">
+<meta property="og:description" content="导入其他人项目的时候，Junit报错，信息如下
+1Error:(23, 17) Failed to resolve: junit:junit:4.12">
+<meta property="og:updated_time" content="2016-06-23T09:38:16.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="clawpo's Blog">
-<meta name="twitter:description" content="tKPha64JQE">
+<meta name="twitter:title" content="Error:(23, 17) Failed to resolve: junit:junit:4.12">
+<meta name="twitter:description" content="导入其他人项目的时候，Junit报错，信息如下
+1Error:(23, 17) Failed to resolve: junit:junit:4.12">
   
     <link rel="alternative" href="/atom.xml" title="clawpo&#39;s Blog" type="application/atom+xml">
   
@@ -180,11 +183,11 @@
 	</div>
 </nav>
 
-      <div class="body-wrap"><article id="page-undefined" class="article article-type-page" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-2016/Error-junit-4.12" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/baidu_verify_tKPha64JQE.html" class="article-date">
-  	<time datetime="2016-04-30T16:26:19.000Z" itemprop="datePublished">2016-05-01</time>
+      <a href="/2016/06/23/2016/Error-junit-4.12.html" class="article-date">
+  	<time datetime="2016-06-23T09:24:00.000Z" itemprop="datePublished">2016-06-23</time>
 </a>
 
     </div>
@@ -194,9 +197,42 @@
       <input type="hidden" class="isFancy" />
     
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Error:(23, 17) Failed to resolve: junit:junit:4.12
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/junit/">junit</a></li></ul>
+	</div>
+
+        
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/android/">android</a>
+	</div>
+
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
     <div class="article-entry" itemprop="articleBody">
       
-        tKPha64JQE
+        <p>导入其他人项目的时候，Junit报错，信息如下</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Error:(<span class="number">23</span>, <span class="number">17</span>) Failed to resolve: junit:junit:<span class="number">4.12</span></span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<p>如果删除 <strong>testCompile ‘junit:junit:4.12’</strong> 这句话程序不会报错</p>
+<p>build.gradle<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">apply plugin: <span class="string">'com.android.application'</span></span><br><span class="line"></span><br><span class="line">android &#123;</span><br><span class="line">    compileSdkVersion <span class="number">23</span></span><br><span class="line">    buildToolsVersion <span class="string">"23.0.1"</span></span><br><span class="line"></span><br><span class="line">    defaultConfig &#123;</span><br><span class="line">        applicationId <span class="string">"com.okedroid.myapplication"</span></span><br><span class="line">        minSdkVersion <span class="number">17</span></span><br><span class="line">        targetSdkVersion <span class="number">23</span></span><br><span class="line">        versionCode <span class="number">1</span></span><br><span class="line">        versionName <span class="string">"1.0"</span></span><br><span class="line">    &#125;</span><br><span class="line">    buildTypes &#123;</span><br><span class="line">        release &#123;</span><br><span class="line">            <span class="function">minifyEnabled <span class="keyword">false</span></span><br><span class="line">            proguardFiles <span class="title">getDefaultProguardFile</span><span class="params">(<span class="string">'proguard-android.txt'</span>)</span>, 'proguard-rules.pro'</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">dependencies </span>&#123;</span><br><span class="line">    <span class="function">compile <span class="title">fileTree</span><span class="params">(dir: <span class="string">'libs'</span>, include: [<span class="string">'*.jar'</span>])</span></span><br><span class="line">    testCompile 'junit:junit:4.12'</span><br><span class="line">    compile 'com.android.support:appcompat-v7:23.0.1'</span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><p>在android中添加</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">repositories &#123;</span><br><span class="line">        maven &#123; url <span class="string">'http://repo1.maven.org/maven2'</span> &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>导入Junit缺失的依赖。</p>
 
       
     </div>
@@ -204,6 +240,16 @@
   </div>
   
     
+<nav id="article-nav">
+  
+  
+    <a href="/2016/06/06/2016/volley_lrucache_disklrucache.html" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">基于Volley和DiskLruCache的缓存策略</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
   
 </article>
 
@@ -214,7 +260,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="undefined" data-title="" data-url="http://clawpo.github.io/baidu_verify_tKPha64JQE.html"></div>
+	<div class="ds-thread" data-thread-key="2016/Error-junit-4.12" data-title="Error:(23, 17) Failed to resolve: junit:junit:4.12" data-url="http://clawpo.github.io/2016/06/23/2016/Error-junit-4.12.html"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
@@ -266,7 +312,7 @@
 		mathjax: true,
 		animate: true,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
