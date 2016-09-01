@@ -12,7 +12,7 @@
 <meta property="og:url" content="http://clawpo.github.io/2016/09/01/2016/git_service.html">
 <meta property="og:site_name" content="clawpo's Blog">
 <meta property="og:description" content="因为项目需要，源码不能保存在GitHub上面，所以在自己的Linux服务器上面打架一个源码管理的系统，当然首选是Git的服务器，看了网上面的很多教程，还是不够清楚，现在记录下。">
-<meta property="og:updated_time" content="2016-09-01T16:02:59.000Z">
+<meta property="og:updated_time" content="2016-09-01T16:13:22.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="搭建Git服务器">
 <meta name="twitter:description" content="因为项目需要，源码不能保存在GitHub上面，所以在自己的Linux服务器上面打架一个源码管理的系统，当然首选是Git的服务器，看了网上面的很多教程，还是不够清楚，现在记录下。">
@@ -236,6 +236,7 @@
 <h2 id="添加下载代码的机器账户的公钥"><a href="#添加下载代码的机器账户的公钥" class="headerlink" title="添加下载代码的机器账户的公钥"></a>添加下载代码的机器账户的公钥</h2><p> （本地）<br> ssh-keygen -t rsa -C “email@example.com”<br> 执行上面的命令，一路回车，都使用默认的即可<br> 复制 id_rsa.pub 里面的内容，添加到服务器的authorized_keys文件中</p>
 <h2 id="验证公钥是否成功添加"><a href="#验证公钥是否成功添加" class="headerlink" title="验证公钥是否成功添加"></a>验证公钥是否成功添加</h2><p> （本地）<br> ssh git@serverIP<br> 能成功登录，说明公钥添加成功</p>
 <h2 id="下载代码"><a href="#下载代码" class="headerlink" title="下载代码"></a>下载代码</h2><p> （本地）<br> git clone git@serverIP:/home/git/sample.git<br> 执行上面的下载代码的命令，即可下载</p>
+<h2 id="开启Git服务"><a href="#开启Git服务" class="headerlink" title="开启Git服务"></a>开启Git服务</h2><p>如果想让下载的路径跟GitHub类似，及git@serverIP:git/sample.git<br>需要开启Git服务才可以，否则必须使用绝对路径。</p>
 
       
     </div>
