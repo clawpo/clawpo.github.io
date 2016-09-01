@@ -4,17 +4,18 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>Tag: lru | clawpo&#39;s Blog</title>
+  <title>搭建Git服务器 | clawpo&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="努力生活，好好工作。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="clawpo's Blog">
-<meta property="og:url" content="http://clawpo.github.io/tags/lru/index.html">
+  <meta name="description" content="因为项目需要，源码不能保存在GitHub上面，所以在自己的Linux服务器上面打架一个源码管理的系统，当然首选是Git的服务器，看了网上面的很多教程，还是不够清楚，现在记录下。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="搭建Git服务器">
+<meta property="og:url" content="http://clawpo.github.io/2016/09/01/2016/git_service.html">
 <meta property="og:site_name" content="clawpo's Blog">
-<meta property="og:description" content="努力生活，好好工作。">
+<meta property="og:description" content="因为项目需要，源码不能保存在GitHub上面，所以在自己的Linux服务器上面打架一个源码管理的系统，当然首选是Git的服务器，看了网上面的很多教程，还是不够清楚，现在记录下。">
+<meta property="og:updated_time" content="2016-09-01T16:02:59.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="clawpo's Blog">
-<meta name="twitter:description" content="努力生活，好好工作。">
+<meta name="twitter:title" content="搭建Git服务器">
+<meta name="twitter:description" content="因为项目需要，源码不能保存在GitHub上面，所以在自己的Linux服务器上面打架一个源码管理的系统，当然首选是Git的服务器，看了网上面的很多教程，还是不够清楚，现在记录下。">
   
     <link rel="alternative" href="/atom.xml" title="clawpo&#39;s Blog" type="application/atom+xml">
   
@@ -179,59 +180,108 @@
 	</div>
 </nav>
 
-      <div class="body-wrap">
+      <div class="body-wrap"><article id="post-2016/git_service" class="article article-type-post" itemscope itemprop="blogPost">
   
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/06/06/2016/volley_lrucache_disklrucache.html" class="archive-article-date">
-  	<time datetime="2016-06-06T01:41:00.000Z" itemprop="datePublished">Jun 6</time>
+    <div class="article-meta">
+      <a href="/2016/09/01/2016/git_service.html" class="article-date">
+  	<time datetime="2016-09-01T15:40:00.000Z" itemprop="datePublished">2016-09-01</time>
 </a>
 
-        </div>
-    	 
+    </div>
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/06/06/2016/volley_lrucache_disklrucache.html">基于Volley和DiskLruCache的缓存策略</a>
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      搭建Git服务器
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+      </header>
+      
+      <div class="article-info article-info-post">
+        
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/lru/">lru</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/volley/">volley</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li></ul>
 	</div>
 
-          
+        
 	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/android/">android</a>
+	<a class="article-category-link" href="/categories/git/">git</a>
 	</div>
 
 
-        </div>
         <div class="clearfix"></div>
-    </header>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>因为项目需要，源码不能保存在GitHub上面，所以在自己的Linux服务器上面打架一个源码管理的系统，当然首选是Git的服务器，看了网上面的很多教程，还是不够清楚，现在记录下。</p>
+<a id="more"></a>
+<h2 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h2><p>（服务器，root下）<br>yum install git</p>
+<h2 id="配置Git"><a href="#配置Git" class="headerlink" title="配置Git"></a>配置Git</h2><p>$ git config –global user.name “Your Name”<br>$ git config –global user.email “email@example.com”</p>
+<h2 id="创建git账户"><a href="#创建git账户" class="headerlink" title="创建git账户"></a>创建git账户</h2><p>（服务器，root下）创建账号<br>useradd -r -s /bin/sh -c ‘git version control’ -d /home/git -m git<br>mkdir -p /home/git<br>chown git:git /home/git</p>
+<p>注意：<br>-r 系统状态<br>-s login shell of the new account<br>-c 备注<br>-d 指定home目录<br>-m 创建home目录</p>
+<h2 id="创建-ssh文件夹和authorized-keys文件"><a href="#创建-ssh文件夹和authorized-keys文件" class="headerlink" title="创建.ssh文件夹和authorized_keys文件"></a>创建.ssh文件夹和authorized_keys文件</h2><p>（服务器，git下）<br>ssh-keygen -t rsa -C “email@example.com”<br>执行上面的命令，一路回车，都使用默认的即可，机会在git账户下面创建.ssh的目录，里面有两个文件：<br> id_rsa  —–私钥<br> id_rsa.pub  —–公钥</p>
+<p> touch authorized_keys<br> 创建authorized_keys文件</p>
+<p> cat id_rsa.pub &gt;&gt; authorized_keys<br> 将公钥添加到authorized_keys文件中</p>
+<h2 id="设置-ssh文件夹和authorized-keys文件的权限"><a href="#设置-ssh文件夹和authorized-keys文件的权限" class="headerlink" title="设置.ssh文件夹和authorized_keys文件的权限"></a>设置.ssh文件夹和authorized_keys文件的权限</h2><p> （服务器，git下）<br> chmod -R 700 .ssh<br> 执行结果如下<br> drwx——   2 git  git  4096 Sep  1 23:31 .ssh<br> chmod 600 authorized_keys<br> 执行结果如下<br> -rw——-  1 git git 2399 Sep  1 23:31 authorized_keys</p>
+<h2 id="创建Git裸仓"><a href="#创建Git裸仓" class="headerlink" title="创建Git裸仓"></a>创建Git裸仓</h2><p> （服务器，git下）<br> mkdir sample.git<br> 创建一个git仓，绝对路径为/home/git/sample.git<br>git init –bare sample.git<br>初始化git裸仓</p>
+<h2 id="添加下载代码的机器账户的公钥"><a href="#添加下载代码的机器账户的公钥" class="headerlink" title="添加下载代码的机器账户的公钥"></a>添加下载代码的机器账户的公钥</h2><p> （本地）<br> ssh-keygen -t rsa -C “email@example.com”<br> 执行上面的命令，一路回车，都使用默认的即可<br> 复制 id_rsa.pub 里面的内容，添加到服务器的authorized_keys文件中</p>
+<h2 id="验证公钥是否成功添加"><a href="#验证公钥是否成功添加" class="headerlink" title="验证公钥是否成功添加"></a>验证公钥是否成功添加</h2><p> （本地）<br> ssh git@serverIP<br> 能成功登录，说明公钥添加成功</p>
+<h2 id="下载代码"><a href="#下载代码" class="headerlink" title="下载代码"></a>下载代码</h2><p> （本地）<br> git clone git@serverIP:/home/git/sample.git<br> 执行上面的下载代码的命令，即可下载</p>
+
+      
+    </div>
+    
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2016/08/15/2016/hellocharts_linechart.html" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">使用HelloCharts绘制简报</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
 </article>
 
-  
-  
-    </div></section>
-  
 
-    
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="2016/git_service" data-title="搭建Git服务器" data-url="http://clawpo.github.io/2016/09/01/2016/git_service.html"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"clawpo"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
 
 </div>
       <footer id="footer">
@@ -265,9 +315,9 @@
 		mathjax: true,
 		animate: true,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false
 	}
