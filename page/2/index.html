@@ -111,7 +111,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/80后/" style="font-size: 10px;">80后</a> <a href="/tags/android/" style="font-size: 16.67px;">android</a> <a href="/tags/android-studio/" style="font-size: 10px;">android studio</a> <a href="/tags/atom/" style="font-size: 10px;">atom</a> <a href="/tags/eclipse/" style="font-size: 10px;">eclipse</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/google-cloud/" style="font-size: 13.33px;">google cloud</a> <a href="/tags/hellocharts/" style="font-size: 10px;">hellocharts</a> <a href="/tags/java/" style="font-size: 20px;">java</a> <a href="/tags/junit/" style="font-size: 10px;">junit</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/longboard/" style="font-size: 16.67px;">longboard</a> <a href="/tags/lru/" style="font-size: 10px;">lru</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/post/" style="font-size: 13.33px;">post</a> <a href="/tags/sykapao/" style="font-size: 10px;">sykapao</a> <a href="/tags/volley/" style="font-size: 13.33px;">volley</a> <a href="/tags/图表/" style="font-size: 10px;">图表</a> <a href="/tags/环信/" style="font-size: 10px;">环信</a>
+						<a href="/tags/80后/" style="font-size: 10px;">80后</a> <a href="/tags/android/" style="font-size: 20px;">android</a> <a href="/tags/android-studio/" style="font-size: 10px;">android studio</a> <a href="/tags/atom/" style="font-size: 10px;">atom</a> <a href="/tags/eclipse/" style="font-size: 10px;">eclipse</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/google-cloud/" style="font-size: 13.33px;">google cloud</a> <a href="/tags/hellocharts/" style="font-size: 10px;">hellocharts</a> <a href="/tags/java/" style="font-size: 20px;">java</a> <a href="/tags/junit/" style="font-size: 10px;">junit</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/longboard/" style="font-size: 16.67px;">longboard</a> <a href="/tags/lru/" style="font-size: 10px;">lru</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/post/" style="font-size: 13.33px;">post</a> <a href="/tags/rxjava/" style="font-size: 10px;">rxjava</a> <a href="/tags/sykapao/" style="font-size: 10px;">sykapao</a> <a href="/tags/volley/" style="font-size: 13.33px;">volley</a> <a href="/tags/图表/" style="font-size: 10px;">图表</a> <a href="/tags/环信/" style="font-size: 10px;">环信</a>
 					</div>
 				</section>
 				
@@ -180,6 +180,70 @@
 </nav>
 
       <div class="body-wrap">
+  
+    <article id="post-2016/androidstudio_error" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/05/03/2016/androidstudio_error.html" class="article-date">
+  	<time datetime="2016-05-03T06:19:00.000Z" itemprop="datePublished">2016-05-03</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/05/03/2016/androidstudio_error.html">&#39;com.android.application&#39; not found</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>将Eclipse的项目导入Android Studio的时候出现如下错误：<br>Error:(1, 0) Plugin with id ‘com.android.application’ not found</p>
+<p>一般来说是导入失败，没有正常生成build.gradle导致的，所以修改build.gradle文件即可：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">buildscript &#123;</span><br><span class="line">    repositories &#123;</span><br><span class="line">        jcenter()</span><br><span class="line">    &#125;</span><br><span class="line">    dependencies &#123;</span><br><span class="line">        classpath <span class="string">'com.android.tools.build:gradle:2.1.0-alpha4'</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">apply plugin: <span class="string">'com.android.application'</span></span><br></pre></td></tr></table></figure></p>
+<p>添加在apply plugin前面就好了。</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/android-studio/">android studio</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/eclipse/">eclipse</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/android/">android</a>
+	</div>
+
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
   
     <article id="post-2016/longboard3" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -787,71 +851,9 @@
 
 
   
-    <article id="post-my-new-post" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/04/27/my-new-post.html" class="article-date">
-  	<time datetime="2016-04-27T13:13:23.000Z" itemprop="datePublished">2016-04-27</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/04/27/my-new-post.html">hello sykapao</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>我在弄一个blog，基于Github的。以后就在这上面记录一些日常哦。</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/sykapao/">sykapao</a></li></ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/life/">随笔</a>
-	</div>
-
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
     </nav>
   
 </div>
