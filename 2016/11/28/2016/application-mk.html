@@ -4,17 +4,18 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>Archives: 2016/6 | clawpo&#39;s Blog</title>
+  <title>Android中不同CPU架构科普 | clawpo&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="努力生活，好好工作。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="clawpo's Blog">
-<meta property="og:url" content="http://clawpo.github.io/archives/2016/06/index.html">
+  <meta name="description" content="在使用NDK编译过程中发现针对不同的CPU架构，部分支持编译调试，部分不支持调试，故记录下来，以防忘记在Application.mk文件中有个预定义命令参数APP_ABI，是指明编译与调试的CPU架构。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Android中不同CPU架构科普">
+<meta property="og:url" content="http://clawpo.github.io/2016/11/28/2016/application-mk.html">
 <meta property="og:site_name" content="clawpo's Blog">
-<meta property="og:description" content="努力生活，好好工作。">
+<meta property="og:description" content="在使用NDK编译过程中发现针对不同的CPU架构，部分支持编译调试，部分不支持调试，故记录下来，以防忘记在Application.mk文件中有个预定义命令参数APP_ABI，是指明编译与调试的CPU架构。">
+<meta property="og:updated_time" content="2016-11-28T02:10:03.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="clawpo's Blog">
-<meta name="twitter:description" content="努力生活，好好工作。">
+<meta name="twitter:title" content="Android中不同CPU架构科普">
+<meta name="twitter:description" content="在使用NDK编译过程中发现针对不同的CPU架构，部分支持编译调试，部分不支持调试，故记录下来，以防忘记在Application.mk文件中有个预定义命令参数APP_ABI，是指明编译与调试的CPU架构。">
   
     <link rel="alternative" href="/atom.xml" title="clawpo&#39;s Blog" type="application/atom+xml">
   
@@ -179,133 +180,153 @@
 	</div>
 </nav>
 
-      <div class="body-wrap">
+      <div class="body-wrap"><article id="post-2016/application-mk" class="article article-type-post" itemscope itemprop="blogPost">
   
+    <div class="article-meta">
+      <a href="/2016/11/28/2016/application-mk.html" class="article-date">
+  	<time datetime="2016-11-28T02:30:00.000Z" itemprop="datePublished">2016-11-28</time>
+</a>
+
+    </div>
   
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
     
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Android中不同CPU架构科普
+    </h1>
+  
+
+      </header>
       
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/android/">android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/libs/">libs</a></li></ul>
+	</div>
+
+        
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/android/">android</a>
+	</div>
+
+
+        <div class="clearfix"></div>
+      </div>
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
     
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/06/29/2016/LeakCanary.html" class="archive-article-date">
-  	<time datetime="2016-06-29T02:45:00.000Z" itemprop="datePublished">Jun 29</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>在使用NDK编译过程中发现针对不同的CPU架构，部分支持编译调试，部分不支持调试，故记录下来，以防忘记<br>在Application.mk文件中有个预定义命令参数APP_ABI，是指明编译与调试的CPU架构。</p>
+<a id="more"></a>
+<p>目前Android系统支持以下七种不同的CPU架构：ARMv5，ARMv7（从2010年起），x86（从2011年），MIPS（从2012年），ARMv8，MIPS64和x86_64（从2014年），每一种都对应相应的ABI。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">CPU架构</th>
+<th style="text-align:left">ABI</th>
+<th style="text-align:left"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">ARMv5</td>
+<td style="text-align:left">armeabi</td>
+<td style="text-align:left">32位，从2010年</td>
+</tr>
+<tr>
+<td style="text-align:left">ARMv7</td>
+<td style="text-align:left">armeabi-v7a</td>
+<td style="text-align:left">32位，从2010年</td>
+</tr>
+<tr>
+<td style="text-align:left">x86</td>
+<td style="text-align:left">x86</td>
+<td style="text-align:left">32位，从2011年</td>
+</tr>
+<tr>
+<td style="text-align:left">MIPS</td>
+<td style="text-align:left">mips</td>
+<td style="text-align:left">32位，从2012年</td>
+</tr>
+<tr>
+<td style="text-align:left">ARMv8</td>
+<td style="text-align:left">arm64-v8a</td>
+<td style="text-align:left">64位，从2014年</td>
+</tr>
+<tr>
+<td style="text-align:left">MIPS64</td>
+<td style="text-align:left">mips64</td>
+<td style="text-align:left">64位，从2014年</td>
+</tr>
+<tr>
+<td style="text-align:left">x86_64</td>
+<td style="text-align:left">x86_64</td>
+<td style="text-align:left">64位，从2014年</td>
+</tr>
+</tbody>
+</table>
+<p>相应生成arm64-v8a，mips64，x86_64下的文件需要NDK_r10以上版本支持。在Application.mk文件里配置APP_ABI的内容。例如指明某个具体的CPU架构</p>
+<p>APP_ABI := arm64-v8a</p>
+<p>或者直接生成所有的版本</p>
+<p>APP_ABI := all</p>
+<p>注意：根据不同的NDK版本，APP_ABI := all仅能生成当前版本支持的ABI信息库文件，如果需要生成最新的必须更新相应的NDK版本。</p>
+<p>或者明确写明支持的CPU架构</p>
+<p>APP_ABI := armeabi，armeabi-v7a，x86，mips，arm64-v8a，mips64，x86_64</p>
+<p>建议采用该方法</p>
+<p>注意：由于目前版本支持的问题，采用Eclipse+NDK+Windows集成方式开发，对应编译生成对应CPU架构的so文件是没有问题的。但是不一定可以执行调试工作，启动NDK调试模式时将会提示无法识别对应的ABI。</p>
+<p>注意：(1)、目前模拟器只有x86_64的没有arm64-v8a的；(2)、在用真机测试armv8-a时，最好先通过adb shell， cat  /proc/cpuinfo ，来查看下真机是否是支持armv8-a；(3)、arm32和arm64有些配置参数不能共存，如-msoft-float仅在arm32位下支持，在arm64位下是不支持的.</p>
 
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/06/29/2016/LeakCanary.html">LeakCanary初探</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/android/">android</a></li></ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/android/">android</a>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2016/11/23/2016/lean_cloud.html" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">使用LeanCloud查找附近的人</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
 </article>
 
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/06/23/2016/Error-junit-4.12.html" class="archive-article-date">
-  	<time datetime="2016-06-23T09:24:00.000Z" itemprop="datePublished">Jun 23</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/06/23/2016/Error-junit-4.12.html">Error:(23, 17) Failed to resolve: junit:junit:4.12</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/junit/">junit</a></li></ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/android/">android</a>
-	</div>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/06/06/2016/volley_lrucache_disklrucache.html" class="archive-article-date">
-  	<time datetime="2016-06-06T01:41:00.000Z" itemprop="datePublished">Jun 6</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/06/06/2016/volley_lrucache_disklrucache.html">基于Volley和DiskLruCache的缓存策略</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/lru/">lru</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/volley/">volley</a></li></ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/android/">android</a>
-	</div>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
 
-  
-  
-    </div></section>
-  
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="2016/application-mk" data-title="Android中不同CPU架构科普" data-url="http://clawpo.github.io/2016/11/28/2016/application-mk.html"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"clawpo"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
 
-    
+
+
 
 </div>
       <footer id="footer">
@@ -339,8 +360,8 @@
 		mathjax: true,
 		animate: true,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false
