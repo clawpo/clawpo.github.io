@@ -12,7 +12,7 @@
 <meta property="og:url" content="http://clawpo.github.io/2016/11/28/2016/application-mk.html">
 <meta property="og:site_name" content="clawpo's Blog">
 <meta property="og:description" content="在使用NDK编译过程中发现针对不同的CPU架构，部分支持编译调试，部分不支持调试，故记录下来，以防忘记在Application.mk文件中有个预定义命令参数APP_ABI，是指明编译与调试的CPU架构。">
-<meta property="og:updated_time" content="2016-11-28T02:10:03.000Z">
+<meta property="og:updated_time" content="2016-11-28T02:46:14.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Android中不同CPU架构科普">
 <meta name="twitter:description" content="在使用NDK编译过程中发现针对不同的CPU架构，部分支持编译调试，部分不支持调试，故记录下来，以防忘记在Application.mk文件中有个预定义命令参数APP_ABI，是指明编译与调试的CPU架构。">
@@ -281,6 +281,18 @@
 <p>建议采用该方法</p>
 <p>注意：由于目前版本支持的问题，采用Eclipse+NDK+Windows集成方式开发，对应编译生成对应CPU架构的so文件是没有问题的。但是不一定可以执行调试工作，启动NDK调试模式时将会提示无法识别对应的ABI。</p>
 <p>注意：(1)、目前模拟器只有x86_64的没有arm64-v8a的；(2)、在用真机测试armv8-a时，最好先通过adb shell， cat  /proc/cpuinfo ，来查看下真机是否是支持armv8-a；(3)、arm32和arm64有些配置参数不能共存，如-msoft-float仅在arm32位下支持，在arm64位下是不支持的.</p>
+<p>最近碰到了一个问题，就是在使用环信的demo基础上合入声网的基本功能。<br>单独使用两个都是没有问题的，但是合入声网后，触发声网的直播功能，就崩溃，要命的是log太多导致最后关键的log没有打印出来：</p>
+<p>java.lang.UnsatisfiedLinkError: com.android.tools.fd.runtime.IncrementalClassLoader$DelegateClassLoader<br>[DexPathList[[<br>dex file “/data/data/cn.ucai.superwechat/files/instant-run/dex/slice-volley-1.0.19_4b75c04313a180e03835a6930735dac9f649eb7e-classes.dex”,<br>dex file … … “/data/data/cn.ucai.superwechat/files/instant-run/dex/slice-com.jakewharton-butterknife-8.4.0_60f696a2b009fbd2a8102eba041159c264b6cf2d-classes.dex”, dex file “/data/data/cn.ucai.superwechat/files/instant-run/dex/slice-com.android.su</p>
+<p>各种调试，回退都没有解决，后面在声网的文档中发现如下</p>
+<blockquote>
+<p>所需库<br>Agora Native SDK for Android为NDK原生库，提供armeabi-v7a和x86平台的二进制包，以及Java 包装类（Java wrapper），开发者可使用其API接口进行开发。详见 直播API参考说明-Android。<br>将Agora Native SDK中libs文件夹下的以下库复制到项目的libs文件夹下：</p>
+<ul>
+<li>armeabi-v7a/</li>
+<li>x86/</li>
+<li>agora-rtc-sdk.jar</li>
+</ul>
+</blockquote>
+<p>对比上文可以知道上面的两个存放so文件的文件夹都是32位的，在官方的论坛中也找到类似的提问，答案都是声网暂时只有32位的so文件，没有64位的。<br>在环信的代码中，有对easeUI的依赖，其中导入了很多的so文件，并且有arm64-v8a这个文件夹，由此可知环信的so文件对32位和64位都有提供。<br>解决办法就是删除环信中arm64-v8a文件夹，新建armeabi-v7a文件夹，将armeabi文件夹中的so文件拷贝到armeabi-v7a中。<br>这样，环信和声网就都只提供32位的so文件，如果手机是64位的就默认都使用32位的，不会因为环信有64位，导致系统直接去找声网的64位的so文件了。</p>
 
       
     </div>
