@@ -111,7 +111,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/80后/" style="font-size: 10px;">80后</a> <a href="/tags/LeanCloud/" style="font-size: 10px;">LeanCloud</a> <a href="/tags/android/" style="font-size: 20px;">android</a> <a href="/tags/android-studio/" style="font-size: 10px;">android studio</a> <a href="/tags/atom/" style="font-size: 10px;">atom</a> <a href="/tags/eclipse/" style="font-size: 10px;">eclipse</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/google/" style="font-size: 10px;">google</a> <a href="/tags/google-cloud/" style="font-size: 12.5px;">google cloud</a> <a href="/tags/hellocharts/" style="font-size: 10px;">hellocharts</a> <a href="/tags/java/" style="font-size: 17.5px;">java</a> <a href="/tags/junit/" style="font-size: 10px;">junit</a> <a href="/tags/libs/" style="font-size: 10px;">libs</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/longboard/" style="font-size: 15px;">longboard</a> <a href="/tags/lru/" style="font-size: 10px;">lru</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/mvp/" style="font-size: 10px;">mvp</a> <a href="/tags/post/" style="font-size: 12.5px;">post</a> <a href="/tags/rxjava/" style="font-size: 10px;">rxjava</a> <a href="/tags/sykapao/" style="font-size: 10px;">sykapao</a> <a href="/tags/volley/" style="font-size: 12.5px;">volley</a> <a href="/tags/图表/" style="font-size: 10px;">图表</a> <a href="/tags/环信/" style="font-size: 10px;">环信</a>
+						<a href="/tags/80后/" style="font-size: 10px;">80后</a> <a href="/tags/LeanCloud/" style="font-size: 10px;">LeanCloud</a> <a href="/tags/android/" style="font-size: 20px;">android</a> <a href="/tags/android-studio/" style="font-size: 10px;">android studio</a> <a href="/tags/apache/" style="font-size: 10px;">apache</a> <a href="/tags/atom/" style="font-size: 10px;">atom</a> <a href="/tags/eclipse/" style="font-size: 10px;">eclipse</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/google/" style="font-size: 10px;">google</a> <a href="/tags/google-cloud/" style="font-size: 12.5px;">google cloud</a> <a href="/tags/hellocharts/" style="font-size: 10px;">hellocharts</a> <a href="/tags/java/" style="font-size: 17.5px;">java</a> <a href="/tags/junit/" style="font-size: 10px;">junit</a> <a href="/tags/libs/" style="font-size: 10px;">libs</a> <a href="/tags/linux/" style="font-size: 12.5px;">linux</a> <a href="/tags/longboard/" style="font-size: 15px;">longboard</a> <a href="/tags/lru/" style="font-size: 10px;">lru</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/mvp/" style="font-size: 10px;">mvp</a> <a href="/tags/post/" style="font-size: 12.5px;">post</a> <a href="/tags/rxjava/" style="font-size: 10px;">rxjava</a> <a href="/tags/sykapao/" style="font-size: 10px;">sykapao</a> <a href="/tags/volley/" style="font-size: 12.5px;">volley</a> <a href="/tags/zentao/" style="font-size: 10px;">zentao</a> <a href="/tags/图表/" style="font-size: 10px;">图表</a> <a href="/tags/环信/" style="font-size: 10px;">环信</a>
 					</div>
 				</section>
 				
@@ -180,6 +180,71 @@
 </nav>
 
       <div class="body-wrap">
+  
+    <article id="post-2016/volley_lrucache_disklrucache" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/06/06/2016/volley_lrucache_disklrucache.html" class="article-date">
+  	<time datetime="2016-06-06T01:41:00.000Z" itemprop="datePublished">2016-06-06</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/06/06/2016/volley_lrucache_disklrucache.html">基于Volley和DiskLruCache的缓存策略</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>在我们开发应用过程中，不可避免的使用网络图片，那么图片请求和缓存就成了一个问题，本着为用户节省流量的角度，我们的应用就应该是已经下载的图片不会重复下载，以及下载过的图片没有网络也能查看的效果，这里就涉及到了网络请求、内存缓存和磁盘缓存。<br>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/lru/">lru</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/volley/">volley</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/android/">android</a>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a  href="/2016/06/06/2016/volley_lrucache_disklrucache.html#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
   
     <article id="post-2016/Android_Universal_framework" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -770,71 +835,6 @@
 
 
   
-    <article id="post-user-google-cloud" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/04/28/user-google-cloud.html" class="article-date">
-  	<time datetime="2016-04-28T11:46:40.000Z" itemprop="datePublished">2016-04-28</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/04/28/user-google-cloud.html">使用Google Cloud创建github私有仓</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h5 id="1-打开Google-Cloud-的官网-需要翻墙"><a href="#1-打开Google-Cloud-的官网-需要翻墙" class="headerlink" title="1. 打开Google Cloud 的官网(需要翻墙)"></a>1. 打开<a href="https://cloud.google.com/source-repositories/">Google Cloud</a> 的官网(需要翻墙)</h5><h5 id="2-点击免费试用"><a href="#2-点击免费试用" class="headerlink" title="2. 点击免费试用"></a>2. 点击免费试用</h5><p><img src="http://7xthzp.com2.z0.glb.clouddn.com/user-google-cloud-1" alt="googlecloud_1"><br>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/google-cloud/">google cloud</a></li></ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/github/">github</a>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a  href="/2016/04/28/user-google-cloud.html#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
@@ -845,7 +845,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2016 Claw Po
+    		&copy; 2017 Claw Po
     	</div>
       <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
       本站总访问量<span id="busuanzi_value_site_pv"></span>次 | 本文总阅读量<span id="busuanzi_value_page_pv"></span>次
