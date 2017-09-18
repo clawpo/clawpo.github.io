@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>http://clawpo.github.io/2017/09/18/2017/peixunjiangshi.html</loc>
+    <lastmod>2017-09-18T09:57:41.000Z</lastmod>
+    <data>
+        <display>
+        <title>培训师培训技能系统训练</title>
+        <pubTime>2017-09-18T03:23:05.000Z</pubTime>
+        
+        <tag>培训</tag>
+         
+         
+           
+             
+              <breadCrumb title="学习" url="http://clawpo.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://clawpo.github.io/2017/08/08/2017/git_command.html</loc>
     <lastmod>2017-08-08T06:34:38.000Z</lastmod>
     <data>
@@ -99,9 +119,9 @@
         <title>搭建Apache服务器</title>
         <pubTime>2017-03-09T01:42:00.000Z</pubTime>
         
-        <tag>linux</tag>
-         
         <tag>zentao</tag>
+         
+        <tag>linux</tag>
          
         <tag>apache</tag>
          
@@ -211,9 +231,9 @@
         <title>搭建Git服务器</title>
         <pubTime>2016-09-01T15:40:00.000Z</pubTime>
         
-        <tag>git</tag>
-         
         <tag>linux</tag>
+         
+        <tag>git</tag>
          
          
            
