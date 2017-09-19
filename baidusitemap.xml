@@ -5,7 +5,7 @@
     
   <url>
     <loc>http://clawpo.github.io/2017/09/18/2017/peixunjiangshi.html</loc>
-    <lastmod>2017-09-19T03:41:59.000Z</lastmod>
+    <lastmod>2017-09-19T03:49:25.000Z</lastmod>
     <data>
         <display>
         <title>培训师培训技能系统训练</title>
@@ -119,9 +119,9 @@
         <title>搭建Apache服务器</title>
         <pubTime>2017-03-09T01:42:00.000Z</pubTime>
         
-        <tag>zentao</tag>
-         
         <tag>linux</tag>
+         
+        <tag>zentao</tag>
          
         <tag>apache</tag>
          
@@ -231,9 +231,9 @@
         <title>搭建Git服务器</title>
         <pubTime>2016-09-01T15:40:00.000Z</pubTime>
         
-        <tag>linux</tag>
-         
         <tag>git</tag>
+         
+        <tag>linux</tag>
          
          
            
